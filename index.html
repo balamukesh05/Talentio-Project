@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        <button id="toggleDarkMode">Toggle Dark Mode</button>
+        <div class="task-input">
+            <input type="text" id="taskTitle" placeholder="Title">
+            <input type="text" id="taskDescription" placeholder="Description">
+            <input type="date" id="taskDueDate">
+            <select id="taskCategory">
+                <option value="Work">Work</option>
+                <option value="Exercise">Exercise</option>
+                <option value="Household">Household</option>
+                <option value="Walking">Walking</option>
+                <option value="Daily Activity">Daily Activity</option>
+            </select>
+            <select id="taskPriority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <button onclick="addTask()">Add Task</button>
+        </div>
+        <div class="filters">
+            <label for="filterStatus">Filter by Status:</label>
+            <select id="filterStatus" onchange="filterTasks()">
+                <option value="All">All</option>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <label for="sortTasks">Sort by:</label>
+            <select id="sortTasks" onchange="sortTasks()">
+                <option value="DueDate">Due Date</option>
+                <option value="Priority">Priority</option>
+            </select>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
