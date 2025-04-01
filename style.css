@@ -1,0 +1,205 @@
+/* Global Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0F172A; /* Deep Navy */
+    color: #E2E8F0; /* Light Gray */
+}
+
+/* Navigation Bar */
+.navigation {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: #1E293B; /* Dark Blue */
+    padding: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navigation .nav-link {
+    color: #E2E8F0;
+    text-decoration: none;
+    padding: 12px 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navigation .nav-link:hover {
+    background: #4F46E5; /* Royal Blue */
+    color: #F59E0B; /* Golden Yellow */
+    border-radius: 5px;
+}
+
+/* Sections */
+section {
+    padding: 60px;
+    text-align: center;
+    background: #1E293B; /* Dark Blue */
+    border-radius: 10px;
+    margin: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Projects Section */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.project-box {
+    width: 320px;
+    background: #334155; /* Slate Blue */
+    padding: 18px;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border-radius: 12px;
+    transition: 0.4s;
+}
+
+.project-box:hover {
+    transform: scale(1.07);
+    background: #4F46E5; /* Highlight Royal Blue */
+}
+
+.project-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Resume Button */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #4F46E5; /* Royal Blue */
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #F59E0B; /* Golden Yellow */
+    color: #0F172A; /* Dark Navy */
+}
+
+/* Typing Animation */
+.typing-text::after {
+    content: "|";
+    display: inline-block;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Skills & Education Section */
+#skills-education {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    background: #1E293B; /* Dark Blue */
+    color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Skills Section */
+.skill-container {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+/* Individual Skill Box */
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 160px;
+    text-align: center;
+}
+
+/* Skill Bars */
+.skill-bar {
+    height: 8px;
+    width: 110px;
+    background: linear-gradient(90deg, #14B8A6, #FACC15); /* Teal to Yellow */
+    border-radius: 5px;
+    animation: fillSkill 2s ease-in-out forwards, glowEffect 1.5s infinite alternate;
+}
+
+/* Glowing Effect */
+@keyframes glowEffect {
+    from {
+        box-shadow: 0 0 6px rgba(255, 223, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 18px rgba(255, 223, 0, 1);
+    }
+}
+
+/* Horizontal Scroll */
+.skill-container::-webkit-scrollbar {
+    height: 6px;
+}
+.skill-container::-webkit-scrollbar-thumb {
+    background: #F59E0B; /* Golden */
+    border-radius: 10px;
+}
+.skill-container::-webkit-scrollbar-track {
+    background: #334155; /* Darker Blue */
+}
+
+/* Education Section */
+.education {
+    transform: translateX(80px);
+    opacity: 0;
+    animation: slideIn 1.5s ease-in-out forwards 0.5s;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Education Box Styling */
+.edu-item {
+    background: #334155; /* Dark Blue */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.edu-item h3 {
+    font-size: 22px;
+    color: #FACC15; /* Yellow */
+}
+
+.edu-item p, .edu-item span {
+    font-size: 17px;
+    color: #E2E8F0;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #0F172A;
+    color: #E2E8F0;
+}
+

@@ -3,46 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Manager</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio - Web Developer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Task Manager</h1>
-        <button id="toggleDarkMode">Toggle Dark Mode</button>
-        <div class="task-input">
-            <input type="text" id="taskTitle" placeholder="Title">
-            <input type="text" id="taskDescription" placeholder="Description">
-            <input type="date" id="taskDueDate">
-            <select id="taskCategory">
-                <option value="Work">Work</option>
-                <option value="Exercise">Exercise</option>
-                <option value="Household">Household</option>
-                <option value="Walking">Walking</option>
-                <option value="Daily Activity">Daily Activity</option>
-            </select>
-            <select id="taskPriority">
-                <option value="Low">Low</option>
-                <option value="Medium">Medium</option>
-                <option value="High">High</option>
-            </select>
-            <button onclick="addTask()">Add Task</button>
+    <header>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="home-content">
+            <h1>Hi, I'm  MUKESH BALAJI P <span class="typing-text"></span></h1>
+            <p>Passionate Web Developer | Building Awesome Websites</p>
         </div>
-        <div class="filters">
-            <label for="filterStatus">Filter by Status:</label>
-            <select id="filterStatus" onchange="filterTasks()">
-                <option value="All">All</option>
-                <option value="Pending">Pending</option>
-                <option value="Completed">Completed</option>
-            </select>
-            <label for="sortTasks">Sort by:</label>
-            <select id="sortTasks" onchange="sortTasks()">
-                <option value="DueDate">Due Date</option>
-                <option value="Priority">Priority</option>
-            </select>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a fresher web developer skilled in front-end and back-end technologies.</p>
+    </section>
+
+
+    <section id="skills-education">
+        <div class="container">
+            <!-- Skills Section -->
+            <div class="skills">
+                <h2>Technical Skills</h2>
+                <div class="skill-container">
+                    <div class="skill"><p>HTML & CSS</p><div class="skill-bar" data-skill="90"></div></div>
+                    <div class="skill"><p>JavaScript</p><div class="skill-bar" data-skill="85"></div></div>
+                    <div class="skill"><p>Java</p><div class="skill-bar" data-skill="80"></div></div>
+                    <div class="skill"><p>Python</p><div class="skill-bar" data-skill="75"></div></div>
+                    <div class="skill"><p>MATLAB</p><div class="skill-bar" data-skill="70"></div></div>
+                    <div class="skill"><p>SolidWorks</p><div class="skill-bar" data-skill="65"></div></div>
+                    <div class="skill"><p>AutoCAD</p><div class="skill-bar" data-skill="60"></div></div>
+                </div>
+    
+                <h2>Soft Skills</h2>
+                <div class="skill-container">
+                    <div class="skill"><p>Problem-Solving</p><div class="skill-bar" data-skill="85"></div></div>
+                    <div class="skill"><p>Teamwork</p><div class="skill-bar" data-skill="80"></div></div>
+                    <div class="skill"><p>Leadership</p><div class="skill-bar" data-skill="75"></div></div>
+                </div>
+            </div>
+    
+            <!-- Education Section -->
+            <div class="education">
+                <h2>Education</h2>
+                <div class="edu-item">
+                    <h3>Bachelor of Engineering</h3>
+                    <p>Electrical and Electronic Engineering</p>
+                    <span>K.Ramkrishnana college of Technology | 2022 - 2026</span>
+                </div>
+                <div class="edu-item">
+                    <h3>Higher Secondary Education</h3>
+                    <p>Science Stream</p>
+                    <span>Esaki vidyaashram | 2020 - 2022</span>
+                </div>
+            </div>
         </div>
-        <ul id="taskList"></ul>
-    </div>
+    </section>
+    
+    
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <div class="project-box">
+                <img src="deweed_shegrow.jpg" alt="DeWeed SheGrow AI Project">
+                <h3>DeWeed SheGrow - AI-Based Project</h3>
+                <p>An AI-driven solution for precision agriculture.</p>
+            </div>
+            <div class="project-box">
+                <img src="electric_go_kart.jpg" alt="Electric Go Kart">
+                <h3>Electric Go Kart</h3>
+                <p>Designed and developed an electric go-kart with high performance.</p>
+            </div>
+            <div class="project-box">
+                <img src="portfolio_website.jpg" alt="Portfolio Website">
+                <h3>Portfolio Website</h3>
+                <p>A personal website to showcase my skills and projects.</p>
+            </div>
+            <div class="project-box">
+                <img src="ecommerce_website.jpg" alt="E-Commerce Website">
+                <h3>E-Commerce Website</h3>
+                <p>A fully functional e-commerce platform with payment integration.</p>
+            </div>
+            <div class="project-box">
+                <img src="todo_app.jpg" alt="To-Do App">
+                <h3>To-Do App</h3>
+                <p>A task management app with user authentication and cloud storage.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <p>Download my resume to learn more about my work and experience.</p>
+        <a href="resume.pdf" download class="btn">Download Resume</a>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: balamukeshg05@gmail.com</p>
+        <p>LinkedIn: www.linkedin.com/in/mukesh-balaji-p-830797256</p>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
